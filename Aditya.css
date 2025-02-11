@@ -13,7 +13,6 @@ header {
     text-align: center;
     padding: 40px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
 
 header h1 {
@@ -32,8 +31,6 @@ header p {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    padding: 0 15px;
-    box-sizing: border-box;
 }
 
 /* profile section */
@@ -46,9 +43,6 @@ header p {
     position: relative;
     z-index: 1;
     color: #666;
-    margin-top: 80px; /* Untuk memberikan ruang untuk foto */
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .imgAditya {
@@ -62,36 +56,26 @@ header p {
     box-shadow: 0 4px 9px rgba(5, 5, 5, 5);
 }
 
-.socialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
 .socialIcons i {
     width: 25px;
     height: 25px;
     font-size: 25px;
     text-align: center;
-    line-height: 25px;
+    line-height: 10px;
 }
 
 .socialIcons a {
     text-decoration: none !important;
+    margin: 5px;
     color: #333;
     display: inline-block;
 }
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
 }
 
 .buttons a {
@@ -100,11 +84,11 @@ header p {
     background-color: #333;
     padding: 12px 30px;
     border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
     font-size: 1.1rem;
     transition: background-color 0.3s, transform 0.2s;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .buttons a:hover {
@@ -112,52 +96,69 @@ header p {
     transform: translateY(-3px);
 }
 
+/* Sections */
+.section {
+    margin-top: 60px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
 /* Experience Section */
 .experience {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
     width: 100%;
-    margin-top: 30px;
 }
 
 .experienceItems {
+    flex: 0 0 calc(50% - 15px);
     background: #fff;
+    box-sizing: border-box;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #444;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .experienceItems h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #333;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
+.experienceItems p {
+    font-size: 1rem;
+    color: #666;
+}
+
 /* Skills section */
 .skills {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     gap: 20px;
-    width: 100%;
-    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .skillsItems {
+    flex: 1;
+    min-width: 250px;
     background: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .skillsItems h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
     color: #333;
     font-weight: 600;
@@ -205,23 +206,16 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 60px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 footer p {
     font-size: 1rem;
-    margin: 0;
 }
 
-/* Mobile Responsiveness */
+/* Enhanced Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    header {
-        padding: 20px 0;
-    }
-
     header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     header p {
@@ -229,73 +223,68 @@ footer p {
     }
 
     .container {
-        width: 100%;
+        width: 95%;
         padding: 10px;
-        margin: 10px auto;
     }
 
     .profile {
-        margin: 60px 10px 20px 10px;
-        padding: 20px 15px;
+        padding: 30px 15px;
     }
 
     .imgAditya {
         width: 120px;
         height: 120px;
-        margin-top: -60px;
-    }
-
-    .experienceItems {
-        padding: 15px;
-    }
-
-    .experienceItems h3 {
-        font-size: 1.3rem;
-    }
-
-    .skillsItems {
-        padding: 15px;
-    }
-
-    .skillsItems h3 {
-        font-size: 1.3rem;
+        margin-top: -80px;
     }
 
     .buttons a {
         padding: 10px 20px;
         font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .experienceItems {
+        flex: 0 0 100%;
+    }
+
+    .experienceItems h3 {
+        font-size: 1.4rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .skillsItems {
+        flex: 0 0 100%;
+        min-width: unset;
+        padding: 20px;
+    }
+
+    .skillsItems h3 {
+        font-size: 1.4rem;
     }
 }
 
-/* Extra Small Devices */
+/* Additional breakpoint for very small devices */
 @media screen and (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
     }
 
     .profile {
-        margin: 50px 5px 20px 5px;
-        padding: 15px 10px;
-    }
-
-    .imgAditya {
-        width: 100px;
-        height: 100px;
-        margin-top: -50px;
-        border-width: 4px;
+        padding: 20px 10px;
+        margin: 0 10px;
     }
 
     .socialIcons i {
         font-size: 20px;
-    }
-
-    .buttons a {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    .experienceItems h3,
-    .skillsItems h3 {
-        font-size: 1.2rem;
     }
 }
