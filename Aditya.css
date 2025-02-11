@@ -1,69 +1,301 @@
-/* Experience Section - Desktop */
-.experience {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+body {
+    font-family: 'roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
-.experienceItems {
-    flex: 0 0 calc(50% - 15px); /* Tetap mempertahankan 2 kolom di desktop */
-    background: #fff;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 650;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 4.5px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
     box-sizing: border-box;
+}
+
+/* profile section */
+.profile {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    color: #666;
+    margin-top: 80px; /* Untuk memberikan ruang untuk foto */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.imgAditya {
+    border-radius: 60%;
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 6px solid white;
+    box-shadow: 0 4px 9px rgba(5, 5, 5, 5);
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.socialIcons i {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.socialIcons a {
+    text-decoration: none !important;
+    color: #333;
+    display: inline-block;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.buttons a:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.experienceItems {
+    background: #fff;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #444;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .experienceItems h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #333;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.experienceItems p {
+/* Skills section */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.skillsItems {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.skillsItems h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.skillsItems ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skillsItems li {
+    margin-bottom: 20px;
     font-size: 1rem;
     color: #666;
 }
 
-/* Media Query untuk Mobile */
-@media screen and (max-width: 768px) {
-    .experience {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .experienceItems {
-        flex: 0 0 100%;
-        width: 100%;
-        margin: 0 0 15px 0;
-    }
-
-    .experienceItems h3 {
-        font-size: 1.4rem;
-    }
+.skillsItems .progressBar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 12px;
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
 }
 
-/* Media Query untuk Device Sangat Kecil */
-@media screen and (max-width: 480px) {
-    .experience {
-        gap: 15px;
+.skillsItems .progressBar span {
+    display: block;
+    height: 100%;
+    background: #333;
+    border-radius: 20px;
+}
+
+.skillsItems .percent {
+    font-size: 0.9rem;
+    text-align: right;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .profile {
+        margin: 60px 10px 20px 10px;
+        padding: 20px 15px;
+    }
+
+    .imgAditya {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
     }
 
     .experienceItems {
         padding: 15px;
-        margin: 0 0 10px 0;
     }
 
     .experienceItems h3 {
-        font-size: 1.2rem;
-        margin-bottom: 8px;
+        font-size: 1.3rem;
     }
 
-    .experienceItems p {
+    .skillsItems {
+        padding: 15px;
+    }
+
+    .skillsItems h3 {
+        font-size: 1.3rem;
+    }
+
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile {
+        margin: 50px 5px 20px 5px;
+        padding: 15px 10px;
+    }
+
+    .imgAditya {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        border-width: 4px;
+    }
+
+    .socialIcons i {
+        font-size: 20px;
+    }
+
+    .buttons a {
+        padding: 8px 16px;
         font-size: 0.9rem;
+    }
+
+    .experienceItems h3,
+    .skillsItems h3 {
+        font-size: 1.2rem;
     }
 }
