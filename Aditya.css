@@ -1,0 +1,242 @@
+body{
+    font-family: 'roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 650;
+}
+
+header p{
+    font-size: 1.2;
+    margin-top: 4.5px;
+}
+
+ /* Container */
+ .container{
+    width: 90%;
+    max-width: 1200PX;
+    margin: 20px auto;
+ }
+
+ /* profile section */
+ .profile{
+    text-align: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    position: relative;
+    z-index: 1;
+    color: #666;
+ }
+
+ .imgAditya{
+    border-radius: 60%;
+    width: 150px;
+    height: 150px;
+    margin-top: -100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 6px solid white;
+    box-shadow: 0 4px 9px rgba(5, 5, 5, 5);
+ }
+
+ .socialIcons i {
+    width: 25px;
+    height: 25px;
+    font-size: 25px; /* Ukuran ikon tetap pakai font-size */
+    text-align: center; /* Agar ikon berada di tengah */
+    line-height: 10px; /* Sesuaikan dengan height */
+}
+
+.socialIcons a {
+    text-decoration: none !important; /* Hapus underline */
+    margin: 5px;
+    color: #333;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: back-ground 0.3s, transform0.2s;
+}
+
+.buttons a:hover {
+    background-color: #444; 
+    transform: translateY(-3px);
+}
+
+
+/* Sections */
+.section {
+    margin-top: 60px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; 
+    width: 100%; 
+}
+
+.experienceItems {
+    flex: 0 0 calc(50% - 15px); /* Lebar 50% dikurangi setengah dari gap */
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #444;
+}
+
+.experienceItems h3 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.experienceItems p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* SKills section */
+.skills{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skillsItems{
+    flex: 1 ;
+    min-width: 250px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.skillsItems h3{
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.skillsItems ul{
+    list-style: none;
+}
+
+.skillsItems li{
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.skillsItems .progressBar{
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 12px;
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.skillsItems .progressBar span{
+    display: block;
+    height: 100%;
+    background: #333;
+    border-radius: 20px;
+}
+
+.skillsItems .percent{
+    font-size: 0.9rem;
+    text-align: right;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive: Adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills-item {
+        margin-bottom: 20px;
+    }
+
+    .profile img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile h2 {
+        font-size: 1.6rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .experience-item h3 {
+        font-size: 1.6rem;
+    }
+}
+
+
+
