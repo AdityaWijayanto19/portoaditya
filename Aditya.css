@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'roboto', 'sans-serif';
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body{
     line-height: 1.6;
 }
 
-header{
+header {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -15,37 +15,37 @@ header{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-header h1{
+header h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 650;
 }
 
-header p{
-    font-size: 1.2;
+header p {
+    font-size: 1.2rem;
     margin-top: 4.5px;
 }
 
- /* Container */
- .container{
+/* Container */
+.container {
     width: 90%;
-    max-width: 1200PX;
+    max-width: 1200px;
     margin: 20px auto;
- }
+}
 
- /* profile section */
- .profile{
+/* profile section */
+.profile {
     text-align: center;
-    padding: 40px;
+    padding: 40px 20px;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
     color: #666;
- }
+}
 
- .imgAditya{
+.imgAditya {
     border-radius: 60%;
     width: 150px;
     height: 150px;
@@ -54,20 +54,28 @@ header p{
     margin-bottom: 20px;
     border: 6px solid white;
     box-shadow: 0 4px 9px rgba(5, 5, 5, 5);
- }
+}
 
- .socialIcons i {
+.socialIcons i {
     width: 25px;
     height: 25px;
-    font-size: 25px; /* Ukuran ikon tetap pakai font-size */
-    text-align: center; /* Agar ikon berada di tengah */
-    line-height: 10px; /* Sesuaikan dengan height */
+    font-size: 25px;
+    text-align: center;
+    line-height: 10px;
 }
 
 .socialIcons a {
-    text-decoration: none !important; /* Hapus underline */
+    text-decoration: none !important;
     margin: 5px;
     color: #333;
+    display: inline-block;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 .buttons a {
@@ -76,17 +84,17 @@ header p{
     background-color: #333;
     padding: 12px 30px;
     border-radius: 50px;
-    margin: 10px;
+    margin: 5px;
     display: inline-block;
     font-size: 1.1rem;
-    transition: back-ground 0.3s, transform0.2s;
+    transition: background-color 0.3s, transform 0.2s;
+    white-space: nowrap;
 }
 
 .buttons a:hover {
-    background-color: #444; 
+    background-color: #444;
     transform: translateY(-3px);
 }
-
 
 /* Sections */
 .section {
@@ -106,12 +114,12 @@ header p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px; 
-    width: 100%; 
+    gap: 30px;
+    width: 100%;
 }
 
 .experienceItems {
-    flex: 0 0 calc(50% - 15px); /* Lebar 50% dikurangi setengah dari gap */
+    flex: 0 0 calc(50% - 15px);
     background: #fff;
     box-sizing: border-box;
     padding: 20px;
@@ -132,16 +140,16 @@ header p{
     color: #666;
 }
 
-/* SKills section */
-.skills{
+/* Skills section */
+.skills {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.skillsItems{
-    flex: 1 ;
+.skillsItems {
+    flex: 1;
     min-width: 250px;
     background: #fff;
     padding: 25px;
@@ -149,24 +157,26 @@ header p{
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-.skillsItems h3{
+.skillsItems h3 {
     font-size: 1.6rem;
     margin-bottom: 15px;
     color: #333;
     font-weight: 600;
 }
 
-.skillsItems ul{
+.skillsItems ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.skillsItems li{
+.skillsItems li {
     margin-bottom: 20px;
     font-size: 1rem;
     color: #666;
 }
 
-.skillsItems .progressBar{
+.skillsItems .progressBar {
     background-color: #e0e0e0;
     border-radius: 20px;
     height: 12px;
@@ -175,14 +185,14 @@ header p{
     overflow: hidden;
 }
 
-.skillsItems .progressBar span{
+.skillsItems .progressBar span {
     display: block;
     height: 100%;
     background: #333;
     border-radius: 20px;
 }
 
-.skillsItems .percent{
+.skillsItems .percent {
     font-size: 0.9rem;
     text-align: right;
     color: #333;
@@ -202,41 +212,79 @@ footer p {
     font-size: 1rem;
 }
 
-/* Responsive: Adjustments for mobile devices */
+/* Enhanced Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
     .container {
+        width: 95%;
         padding: 10px;
     }
 
-    .skills {
-        flex-direction: column;
+    .profile {
+        padding: 30px 15px;
     }
 
-    .skills-item {
-        margin-bottom: 20px;
+    .imgAditya {
+        width: 120px;
+        height: 120px;
+        margin-top: -80px;
     }
 
-    .profile img {
-        width: 160px;
-        height: 160px;
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
     }
 
-    .profile h2 {
-        font-size: 1.6rem;
+    .experienceItems {
+        flex: 0 0 100%;
     }
 
-    header h1 {
-        font-size: 2.2rem;
+    .experienceItems h3 {
+        font-size: 1.4rem;
     }
 
     .section h2 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
-    .experience-item h3 {
-        font-size: 1.6rem;
+    .skillsItems {
+        flex: 0 0 100%;
+        min-width: unset;
+        padding: 20px;
+    }
+
+    .skillsItems h3 {
+        font-size: 1.4rem;
     }
 }
 
+/* Additional breakpoint for very small devices */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
 
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
 
+    .profile {
+        padding: 20px 10px;
+        margin: 0 10px;
+    }
+
+    .socialIcons i {
+        font-size: 20px;
+    }
+}
